@@ -3,8 +3,7 @@ import csv
 from flask import Flask, render_template, request, redirect, url_for
 import os
 
-# Set OpenAI API key
-openai.api_key = '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'
+
 
 # Initialize Flask app
 app = Flask(__name__, static_folder='templates')
