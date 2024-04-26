@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VacayBot - Your Personal Travel Assistant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d1d1d1;
+            color: #333;
+            display: flex;
+            flex: 1;
+            background-image: url('/templates/wp12411281-4k-travel-wallpapers.jpg');
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the background image */
+            justify-content: center; /* Center the container horizontally */
+            align-items: center; /* Center the container vertically */
+            height: 100vh; /* Make the body take up the full height of the viewport */
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            /*margin: 0 auto;*/
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Adding box shadow */
+            background-color: rgba(255, 255, 255, 0.6); /* Change the alpha value (0.5 in this case) to adjust transparency */
+            border-radius: 15px; /* Adding border radius */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            font-weight: 900;
+            font-family: 'Times New Roman';
+
+        }
+
+        .header h1 {
+            font-size: 55px;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+            color: #503382; /* Blue color */
+            text-decoration: solid;
+            text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5); /* Shadow effect */
+            letter-spacing: 2px;
+            animation: pulseAnimation 2s infinite alternate; /* Animation for pulse effect */
+        }
+
+        @keyframes pulseAnimation {
+            0% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1.3);
+            }
+        }
+
+        .chat-messages {
+            background-color: #ebebeb; /* Changing chat messages background color */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            overflow-y: scroll;
+            height: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .chat-messages p {
+            margin: 0 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .chat-messages:hover {
+            box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.4);
+        }
+
+        form {
+            display: flex;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            background-color: #ebebeb;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adding box shadow */
+            border-right: none; /* Removing border-right */
+        }
+
+        input[type="text"]:focus {
+            border: 1px solid #5d5c5c;
+            background-color: #ffffff;
+            outline: none; /* Removing outline on focus */
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #5c34a2;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid #5c34a2; /* Adding border */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #301b54;
+            transition: all 0.3s ease;
+            transform: scale(1.05);
+        }
+
+        button[type="submit"]:focus {
+            outline: none; /* Removing outline on focus */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #301b54;
+            transition: all 0.3s ease;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>VacayBot!</h1>
+            <p>Your Personal Travel Assistant</p>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            {% for message in context %}
+                <p><strong>{{ message['role'] }}:</strong> {{ message['content'] }}</p>
+            {% endfor %}
+        </div>
+        <form id="chat-form" action="/" method="POST">
+            <input type="text" name="user_input" id="user-input" placeholder="Enter your message here..." autocomplete="off">
+            <button type="submit">Chat!</button>
+        </form>
+    </div>
+    <script>
+        // Function to scroll the chat messages container to the bottom
+        function scrollToBottom() {
+            var chatMessages = document.getElementById('chat-messages');
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Scroll to bottom when the page loads
+        window.onload = function() {
+            scrollToBottom();
+        };
+
+        // Scroll to bottom when a new message is submitted
+        document.getElementById('chat-form').addEventListener('submit', function() {
+            setTimeout(scrollToBottom, 100); // Delay to ensure the scroll occurs after the new message is added
+        });
+    </script>
+</body>
+</html>

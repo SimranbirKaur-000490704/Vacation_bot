@@ -1,0 +1,41 @@
+city_name,hotel_name,deluxe_price,royal_price,penthouse_price
+New York City,The Plaza Hotel,200,300,400
+New York City,The St. Regis New York,150,250,350
+Paris,The Peninsula,85,140,200
+Paris,Hotel Plaza Athénée,95,150,250
+Amsterdam,Hotel Pulitzer Amsterdam,90,150,220
+Amsterdam,Conservatorium Hotel,100,150,195
+Sydney,Park Hyatt,160,230,320
+Sydney,Shangri-la Hotel,150,220,300
+Cancun,JW Marriott Resort,180,260,380
+Cancun,Secrets The Vine,100,150,210
+Vancouver,Fairmont Pacific Rim,180,270,360
+Vancouver,Rosewood Hotel Georgia,220,350,440
+Copenhagen,Hotel D'Angleterre,120,180,250
+Copenhagen,Nimb Hotel,100,200,280
+Hong Kong,The Ritz-Carlton,150,250,350
+Hong Kong,Four Seasons Hotel,200,300,400
+Los Angeles,The Beverly Hills Hotel,400,300,400
+Los Angeles,Chateau Marmont,150,250,350
+Dubai,Burj Al Arab Jumeirah,500,700,900
+Dubai,Atlantis The Palm,400,550,700
+Toronto,The Ritz-Carlton Toronto,220,320,420
+Toronto,Fairmont Royal York,180,250,350
+Mumbai,The Taj Mahal Palace,180,250,350
+Mumbai,Trident Nariman Point,150,220,300
+Barcelona,Hotel Arts Barcelona,220,320,420
+Barcelona,W Barcelona,250,350,450
+Rome,Hotel de Russie,250,350,450
+Rome,The St. Regis Rome,300,400,500
+Tokyo,Park Hyatt Tokyo,300,400,550
+Tokyo,Mandarin Oriental Tokyo,280,380,480
+Cape Town,The Table Bay Hotel,180,250,350
+Cape Town,One&Only Cape Town,200,300,400
+Auckland,Cordis Auckland,180,250,350
+Auckland,SkyCity Grand Hotel,200,300,400
+London,The Ritz London,400,500,600
+London,The Savoy,350,450,550
+Berlin,Hotel Adlon Kempinski Berlin,200,300,400
+Berlin,Hotel am Steinplatz,150,250,350
+Athens,Hotel Grande Bretagne,250,350,450
+Athens,Electra Palace Athens,200,300,400
