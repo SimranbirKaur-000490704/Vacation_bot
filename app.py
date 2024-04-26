@@ -3,8 +3,6 @@ import csv
 from flask import Flask, render_template, request, redirect, url_for
 import os
 
-
-
 # Initialize Flask app
 app = Flask(__name__, static_folder='templates')
 
